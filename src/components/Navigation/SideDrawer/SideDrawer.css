@@ -1,0 +1,41 @@
+.SideDrawer {
+    position: fixed;
+    width: 280px;
+    max-width: 70%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    background-color: white;
+    padding: 32px 16px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-out;
+
+
+}
+
+/* sideDrawer z-index should be above the Backdrop to able to use it  */
+/* transition property is for react to change the transform
+property and change the animate in 3milisecond! */
+
+@media (min-width: 500px) {
+    .SideDrawer {
+        display: none;
+    }
+}
+
+.Open {
+    transform: translateX(0);
+}
+/* responsable to play animation */
+/* will animate based on class SideDrawer */
+.Close {
+    transform: translateX(-100%);
+}
+/* responsable to play animation */
+/* will shift to the left */
+
+.Logo {
+    height: 11%;
+    margin-bottom: 32px;
+}
